@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import reactorLogo from "@/assets/reactor-logo.png";
+import reactorLogo from "@/assets/reactor-logo.webp";
 
 const sponsors = [
   { name: "Reactor Studio", logo: reactorLogo, url: "https://www.reactor.studio/" },
@@ -37,6 +37,8 @@ export default function SponsorsSection() {
               <img
                 src={s.logo}
                 alt={s.name}
+                width={364}
+                height={337}
                 className="h-14 w-auto opacity-60 group-hover:opacity-100 transition-opacity"
               />
             </a>

@@ -1,4 +1,4 @@
-import logo from "@/assets/vibecoders.png";
+const logo = "/vibecoders.webp";
 
 const navLinks = [
   { label: "O nama", href: "#about" },

@@ -150,3 +150,24 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up,
+  .rule-expand {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .cursor-blink {
+    animation: none;
+  }
+  .animate-ticker {
+    animation: none;
+  }
+  .fade-in-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
