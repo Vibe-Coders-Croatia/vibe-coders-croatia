@@ -49,8 +49,8 @@ export default function AboutSection() {
             <span className="text-gradient-sunset"> digitalno</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Vibe Coders Croatia je nastao 2026. iz jednostavne iskre
-            — grupa strastvenih buildera i veterana industrije koji su odlučili graditi zajedno.{" "}
+            Zajednica designera, developera i buildera nastala 2026. iz jednostavne ideje
+            — koji su odlučili graditi zajedno.{" "}
             <span className="text-sunset-orange font-medium">Kodiraj, gradi, dijeli.</span>
           </p>
         </div>
