@@ -9,7 +9,7 @@ const navLinks = [
 const socials = [
   { slug: "discord", href: "https://discord.gg/mTbs9mNv", label: "Discord" },
   { slug: "meetup", href: "https://www.meetup.com/vibe-coders-croatia/", label: "Meetup" },
-  { slug: "github", href: "#", label: "GitHub" },
+  { slug: "github", href: "https://github.com/Vibe-Coders-Croatia", label: "GitHub" },
 ];
 
 export default function Footer() {
