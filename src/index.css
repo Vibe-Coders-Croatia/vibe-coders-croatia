@@ -151,11 +151,6 @@
   transform: translateY(0);
 }
 
-/* ─── Hide Lovable badge ─── */
-#lovable-badge {
-  display: none !important;
-}
-
 /* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
   .reveal-up,
