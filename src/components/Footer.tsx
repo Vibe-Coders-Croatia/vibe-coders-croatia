@@ -29,7 +29,7 @@ export default function Footer() {
               <img src={logo} alt="Vibe Coders Croatia" className="w-10 h-10 rounded-lg object-cover" />
               <div>
                 <div className="font-bold text-white text-sm">Vibe Coders Croatia</div>
-                <div className="text-xs text-golden-sand">Gradimo budućnost, zajedno</div>
+                <div className="text-xs text-golden-sand">Let's build together</div>
               </div>
             </div>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
