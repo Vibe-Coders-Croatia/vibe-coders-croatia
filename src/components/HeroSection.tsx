@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import logo from "@/assets/vibecoders.png";
 
 const taglines = [
-  "Gdje kod postaje zajednica.",
   "Kodiraj, gradi, dijeli.",
   "Bez gatekeepinga, bez granica.",
   "Otvoreni kod, otvoreni ljudi.",
