@@ -49,10 +49,11 @@ export default function AboutSection() {
             <span className="text-gradient-sunset"> digitalno</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Vibe Coders Croatia je krenuo 2022. kao mali zagrebački meetup — šačica entuzijasta
-            koji su htjeli mjesto bez korporativne ukočenosti. Samo dobar kod, hladna piva i iskren razgovor.
-            Danas nas je 420+, organiziramo eventove od Osijeka do Splita, ujedinjeni jednom idejom:{" "}
-            <span className="text-sunset-orange font-medium">Hrvatska zaslužuje zajednicu svjetske klase za sve koji grade digitalno.</span>
+            Vibe Coders Croatia je nastao 2026. iz jednostavne iskre — grupa strastvenih buildera
+            i veterana industrije koji vjeruju da je najbolji kod onaj pisan zajedno.
+            Bez korporativnog šuma, bez ego-a — samo znatiželja, dijeljenje znanja i iskrena strast
+            prema svemu što gradimo.{" "}
+            <span className="text-sunset-orange font-medium">Zajedno promoviramo, učimo i rastemo — jer budućnost se ne čeka, ona se kodira.</span>
           </p>
         </div>
 
