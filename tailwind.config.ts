@@ -57,28 +57,30 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Brand colors
+        navy: "hsl(var(--navy))",
+        "sunset-orange": "hsl(var(--sunset-orange))",
+        "warm-coral": "hsl(var(--warm-coral))",
+        "golden-sand": "hsl(var(--golden-sand))",
+        "tropical-teal": "hsl(var(--tropical-teal))",
+        "sunset-purple": "hsl(var(--sunset-purple))",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        mono: ["'JetBrains Mono'", "'Fira Code'", "monospace"],
+      },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {

@@ -1,0 +1,21 @@
+{
+  "name": "Vibe Coders Croatia",
+  "short_name": "Vibe Coders",
+  "description": "Vibe Coders Croatia — zajednica programera u Hrvatskoj. Meetupovi, open-source projekti i networking.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a2e",
+  "icons": [
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
