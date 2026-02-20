@@ -5,8 +5,6 @@ import logo from "@/assets/vibecoders.png";
 const navLinks = [
   { label: "O nama", href: "#about" },
   { label: "Projekti", href: "#projects" },
-  { label: "Eventi", href: "#events" },
-  { label: "Pridruži se", href: "#join" },
 ];
 
 export default function Navbar() {
