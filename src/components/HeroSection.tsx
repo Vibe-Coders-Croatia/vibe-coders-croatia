@@ -35,13 +35,6 @@ const techLogos = [
   { name: "Svelte", slug: "svelte" },
 ];
 
-const stats = [
-  { value: "420+", label: "Članova" },
-  { value: "38", label: "Eventova" },
-  { value: "4", label: "Grada" },
-  { value: "12", label: "Open Source projekata" },
-];
-
 export default function HeroSection() {
   const [taglineIndex, setTaglineIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
@@ -128,15 +121,6 @@ export default function HeroSection() {
             </a>
           </div>
 
-          {/* Stats bar */}
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {stats.map((s) => (
-              <div key={s.label} className="text-center bg-white/8 rounded-xl p-3 border border-white/15 backdrop-blur-sm">
-                <div className="text-2xl font-bold text-golden-sand">{s.value}</div>
-                <div className="text-xs text-white/60 mt-0.5">{s.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Right: Animated code block */}
