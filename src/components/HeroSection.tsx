@@ -81,7 +81,7 @@ export default function HeroSection() {
 
       <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-12 py-20">
         {/* Left: Headline + CTAs */}
-        <div className="flex-1 text-center lg:text-left">
+        <div className="flex-1 w-full text-center lg:text-left">
           <div className="mb-6 flex justify-center lg:justify-start">
             <img src={logo} alt="Vibe Coders Croatia" className="w-52 h-52 object-contain drop-shadow-2xl" />
           </div>
