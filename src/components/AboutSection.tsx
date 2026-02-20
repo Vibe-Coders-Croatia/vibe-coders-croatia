@@ -50,7 +50,7 @@ export default function AboutSection() {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Zajednica designera, developera i buildera nastala 2026. iz jednostavne ideje
-            — koji su odlučili graditi zajedno.{" "}
+            — grupa strastvenih buildera i veterana industrije koji su odlučili graditi zajedno.{" "}
             <span className="text-sunset-orange font-medium">Kodiraj, gradi, dijeli.</span>
           </p>
         </div>
