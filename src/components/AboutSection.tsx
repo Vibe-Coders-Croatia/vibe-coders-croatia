@@ -1,34 +1,21 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Heart, Code2, Users, Lightbulb } from "lucide-react";
 
 const values = [
   {
-    icon: Code2,
     title: "Open Source First",
     description: "Vjerujemo u gradnju na otvorenom, dijeljenje koda i zajedničko jačanje open source zajednice.",
-    color: "text-tropical-teal",
-    bg: "bg-tropical-teal/10",
   },
   {
-    icon: Users,
     title: "Suradnja",
     description: "Bez obzira na iskustvo ili struku — seniori i juniori, koderi i product builderi, svi uče jedni od drugih.",
-    color: "text-sunset-orange",
-    bg: "bg-sunset-orange/10",
   },
   {
-    icon: Lightbulb,
     title: "Kontinuirano učenje",
     description: "Radionice, predavanja i hackathoni koji održavaju hrvatsku tech scenu oštrom i znatiželjnom.",
-    color: "text-golden-sand",
-    bg: "bg-golden-sand/20",
   },
   {
-    icon: Heart,
     title: "Bez barijera",
     description: "Bez gatekeepinga, bez elitizma. Svatko je dobrodošao — od studenata do CTO-a, od prvog committa do stotog producta.",
-    color: "text-warm-coral",
-    bg: "bg-warm-coral/10",
   },
 ];
 
@@ -36,36 +23,41 @@ export default function AboutSection() {
   const ref = useScrollReveal();
 
   return (
-    <section id="about" className="py-16 bg-background relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-64 h-64 checkerboard-motif opacity-40 pointer-events-none rounded-bl-3xl" />
+    <section id="about" className="py-20 md:py-28 relative" ref={ref}>
+      <div className="container mx-auto px-6">
+        {/* Section label */}
+        <div className="fade-in-section">
+          <p className="font-mono text-[11px] text-sunset-orange tracking-[0.2em] uppercase mb-6">
+            // naša priča
+          </p>
 
-      <div className="container mx-auto px-6" ref={ref}>
-        <div className="fade-in-section text-center mb-10">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-tropical-teal/15 text-tropical-teal text-sm font-semibold mb-4">
-            Naša priča
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
-            Za sve koji grade
-            <span className="text-gradient-sunset"> digitalno</span>
+          <h2 className="font-display font-[800] text-3xl md:text-5xl lg:text-[3.5rem] text-foreground leading-[1.05] mb-5 max-w-2xl">
+            Za sve koji grade{" "}
+            <span className="text-sunset-orange">digitalno</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+
+          <p className="text-muted-foreground max-w-xl mb-16 leading-relaxed">
             Zajednica designera, developera i buildera nastala 2026. iz jednostavne ideje
-            — grupa strastvenih buildera i veterana industrije koji su odlučili graditi zajedno.{" "}
-            <span className="text-sunset-orange font-medium">Kodiraj, gradi, dijeli.</span>
+            — grupa strastvenih buildera i veterana industrije koji su odlučili graditi zajedno.
           </p>
         </div>
 
-        <div className="fade-in-section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {values.map((v) => (
+        {/* Values — editorial numbered list */}
+        <div className="fade-in-section border-t border-border">
+          {values.map((v, i) => (
             <div
               key={v.title}
-              className="bg-card rounded-2xl p-6 border border-border shadow-card hover:shadow-warm transition-shadow group"
+              className="grid grid-cols-1 md:grid-cols-[64px_200px_1fr] gap-2 md:gap-6 py-7 md:py-8 border-b border-border group"
             >
-              <div className={`w-12 h-12 rounded-xl ${v.bg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                <v.icon className={`w-6 h-6 ${v.color}`} />
-              </div>
-              <h3 className="font-bold text-navy mb-2">{v.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{v.description}</p>
+              <span className="font-mono text-sm text-muted-foreground/30 group-hover:text-sunset-orange/50 transition-colors">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="font-display font-[700] text-foreground text-lg group-hover:text-sunset-orange transition-colors">
+                {v.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-lg">
+                {v.description}
+              </p>
             </div>
           ))}
         </div>

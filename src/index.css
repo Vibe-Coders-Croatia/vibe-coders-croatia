@@ -4,65 +4,58 @@
 
 @layer base {
   :root {
-    /* Base surfaces — warm white */
-    --background: 36 33% 97%;
-    --foreground: 220 46% 14%;
+    /* Surfaces — warm sun-washed white */
+    --background: 39 32% 97%;
+    --foreground: 222 40% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 46% 14%;
+    --card-foreground: 222 40% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 46% 14%;
+    --popover-foreground: 222 40% 16%;
 
-    /* Deep Navy as primary */
-    --primary: 220 46% 19%;
-    --primary-foreground: 36 33% 97%;
+    /* Sunset orange as primary */
+    --primary: 24 79% 54%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Light sandy secondary */
-    --secondary: 44 60% 94%;
-    --secondary-foreground: 220 46% 19%;
+    /* Sandy cream secondary */
+    --secondary: 39 28% 93%;
+    --secondary-foreground: 222 40% 16%;
 
-    --muted: 44 30% 92%;
-    --muted-foreground: 217 19% 56%; /* #8A9BB5 */
+    --muted: 39 18% 93%;
+    --muted-foreground: 222 14% 52%;
 
     --accent: 24 79% 54%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 6 65% 54%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 88%;
-    --input: 220 20% 88%;
+    --border: 222 14% 87%;
+    --input: 222 14% 87%;
     --ring: 24 79% 54%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     /* Brand palette */
-    --navy: 220 46% 19%;
+    --navy: 222 40% 16%;
     --sunset-orange: 24 79% 54%;
     --warm-coral: 6 65% 54%;
     --golden-sand: 44 76% 66%;
-    --tropical-teal: 175 62% 47%;
+    --tropical-teal: 170 55% 45%;
     --sunset-purple: 291 30% 42%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220, 46%, 19%) 0%, hsl(291, 30%, 42%) 40%, hsl(6, 65%, 54%) 75%, hsl(24, 79%, 54%) 100%);
-    --gradient-sunset: linear-gradient(90deg, hsl(24, 79%, 54%), hsl(6, 65%, 54%));
-    --gradient-teal: linear-gradient(135deg, hsl(175, 62%, 47%), hsl(175, 62%, 37%));
+    /* Shadows — warm and soft */
+    --shadow-warm: 0 4px 24px -4px hsl(24 79% 54% / 0.15);
+    --shadow-card: 0 1px 3px 0 hsl(222 20% 50% / 0.06), 0 1px 2px -1px hsl(222 20% 50% / 0.04);
 
-    /* Shadows */
-    --shadow-warm: 0 4px 24px -4px hsl(24 79% 54% / 0.18);
-    --shadow-navy: 0 4px 24px -4px hsl(220 46% 19% / 0.12);
-    --shadow-card: 0 2px 12px -2px hsl(220 46% 19% / 0.08);
-    --shadow-teal-glow: 0 8px 32px -8px hsl(175 62% 47% / 0.25);
-
-    --sidebar-background: 36 33% 97%;
-    --sidebar-foreground: 220 46% 14%;
-    --sidebar-primary: 220 46% 19%;
-    --sidebar-primary-foreground: 36 33% 97%;
-    --sidebar-accent: 44 60% 94%;
-    --sidebar-accent-foreground: 220 46% 19%;
-    --sidebar-border: 220 20% 88%;
+    --sidebar-background: 39 32% 97%;
+    --sidebar-foreground: 222 40% 16%;
+    --sidebar-primary: 24 79% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 39 28% 93%;
+    --sidebar-accent-foreground: 222 40% 16%;
+    --sidebar-border: 222 14% 87%;
     --sidebar-ring: 24 79% 54%;
   }
 }
@@ -78,64 +71,57 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
   }
 }
 
 @layer utilities {
-  .gradient-hero {
-    background: var(--gradient-hero);
-  }
-  .gradient-sunset {
-    background: var(--gradient-sunset);
-  }
-  .gradient-teal {
-    background: var(--gradient-teal);
-  }
   .shadow-warm {
     box-shadow: var(--shadow-warm);
-  }
-  .shadow-navy {
-    box-shadow: var(--shadow-navy);
   }
   .shadow-card {
     box-shadow: var(--shadow-card);
   }
-  .shadow-teal-glow {
-    box-shadow: var(--shadow-teal-glow);
-  }
-  .glass-light {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-  }
-  .glass-navy {
-    background: rgba(27, 42, 74, 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(232, 114, 42, 0.2);
-  }
-  .checkerboard-motif {
-    background-image:
-      repeating-conic-gradient(hsl(24 79% 54% / 0.08) 0% 25%, transparent 0% 50%);
-    background-size: 16px 16px;
-  }
-  .text-gradient-sunset {
-    background: var(--gradient-sunset);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .text-gradient-hero {
-    background: linear-gradient(135deg, hsl(var(--sunset-orange)), hsl(var(--warm-coral)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .dot-grid {
+    background-image: radial-gradient(
+      circle at center,
+      hsl(var(--sunset-orange) / 0.12) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
   }
 }
 
-/* Typewriter cursor */
+/* ─── Hero stagger entrance ─── */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-up {
+  opacity: 0;
+  animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ─── Rule line expand ─── */
+@keyframes expandRule {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.rule-expand {
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: expandRule 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ─── Typewriter cursor ─── */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -144,36 +130,21 @@
   animation: blink 1s step-end infinite;
 }
 
-/* Ticker scroll */
+/* ─── Ticker scroll ─── */
 @keyframes ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 .animate-ticker {
-  animation: ticker 28s linear infinite;
-}
-.animate-ticker:hover {
-  animation-play-state: paused;
+  animation: ticker 40s linear infinite;
 }
 
-/* Scroll fade-in */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(32px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
+/* ─── Scroll reveal ─── */
 .fade-in-section {
   opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .fade-in-section.visible {
   opacity: 1;

@@ -9,35 +9,35 @@ export default function SponsorsSection() {
   const ref = useScrollReveal();
 
   return (
-    <section id="sponsors" className="py-16 bg-background relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-64 h-64 checkerboard-motif opacity-25 pointer-events-none rounded-br-3xl" />
+    <section id="sponsors" className="py-20 md:py-28 relative" ref={ref}>
+      <div className="container mx-auto px-6">
+        <div className="fade-in-section">
+          <p className="font-mono text-[11px] text-golden-sand tracking-[0.2em] uppercase mb-6">
+            // sponzori
+          </p>
 
-      <div className="container mx-auto px-6" ref={ref}>
-        <div className="fade-in-section text-center mb-8">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-golden-sand/30 text-foreground text-sm font-semibold mb-4">
-            Sponzori i partneri
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
-            Oni koji nas <span className="text-gradient-sunset">pokreću</span>
+          <h2 className="font-display font-[800] text-3xl md:text-5xl lg:text-[3.5rem] text-foreground leading-[1.05] mb-5">
+            Oni koji nas <span className="text-sunset-orange">pokreću</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+
+          <p className="text-muted-foreground max-w-xl mb-12 leading-relaxed">
             Naši sponzori omogućuju besplatne eventove, radionice i infrastrukturu zajednice.
           </p>
         </div>
 
-        <div className="fade-in-section flex justify-center">
+        <div className="fade-in-section flex flex-wrap gap-4">
           {sponsors.map((s) => (
             <a
               key={s.name}
               href={s.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative bg-card border border-border rounded-2xl px-12 py-8 flex items-center justify-center shadow-card transition-all duration-500 ease-out group hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(232,168,74,0.3)] hover:border-golden-sand/60"
+              className="group border border-border rounded-lg px-10 py-6 flex items-center justify-center hover:border-golden-sand/50 hover:shadow-warm transition-all"
             >
               <img
                 src={s.logo}
                 alt={s.name}
-                className="h-20 w-auto transition-transform duration-500 ease-out group-hover:scale-110"
+                className="h-14 w-auto opacity-60 group-hover:opacity-100 transition-opacity"
               />
             </a>
           ))}

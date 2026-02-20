@@ -6,92 +6,84 @@ export default function ProjectsSection() {
   const ref = useScrollReveal();
 
   return (
-    <section id="projects" className="py-16 bg-secondary/40 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-72 h-72 checkerboard-motif opacity-25 pointer-events-none rounded-bl-3xl" />
+    <section id="projects" className="py-20 md:py-28 bg-card relative" ref={ref}>
+      <div className="container mx-auto px-6">
+        <div className="fade-in-section">
+          <p className="font-mono text-[11px] text-tropical-teal tracking-[0.2em] uppercase mb-6">
+            // open source
+          </p>
 
-      <div className="container mx-auto px-6" ref={ref}>
-        <div className="fade-in-section text-center mb-10">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-tropical-teal/15 text-tropical-teal text-sm font-semibold mb-4">
-            Open Source
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
-            Projekti <span className="text-gradient-sunset">zajednice</span>
+          <h2 className="font-display font-[800] text-3xl md:text-5xl lg:text-[3.5rem] text-foreground leading-[1.05] mb-5">
+            Projekti <span className="text-sunset-orange">zajednice</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+
+          <p className="text-muted-foreground max-w-xl mb-12 leading-relaxed">
             Napravljeno od zajednice, za zajednicu. Pravi kod, pravi utjecaj.
           </p>
         </div>
 
         {repos.length > 0 ? (
-          <div className="fade-in-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+          <div className="fade-in-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {repos.map((repo) => (
               <div
                 key={repo.name}
-                className="bg-card rounded-2xl p-6 border border-border shadow-card hover:shadow-teal-glow hover:border-tropical-teal/30 transition-all group flex flex-col"
+                className="group border border-border rounded-lg p-6 hover:border-tropical-teal/30 transition-colors"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="font-bold text-navy font-mono text-base group-hover:text-tropical-teal transition-colors">
-                    {repo.name}
-                  </h3>
+                  <div className="flex items-center gap-2">
+                    <Github className="w-4 h-4 text-muted-foreground/50" />
+                    <span className="font-mono text-sm text-foreground group-hover:text-tropical-teal transition-colors">
+                      {repo.name}
+                    </span>
+                  </div>
                   <div className="flex gap-2">
                     <a
                       href={repo.html_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-navy transition-colors p-1"
+                      className="text-muted-foreground/40 hover:text-foreground transition-colors p-1"
                       title="GitHub"
                     >
-                      <Github className="w-4 h-4" />
+                      <ExternalLink className="w-3.5 h-3.5" />
                     </a>
-                    {repo.homepage && (
-                      <a
-                        href={repo.homepage}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-sunset-orange transition-colors p-1"
-                        title="Demo"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    )}
                   </div>
                 </div>
 
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   {repo.description || "Nema opisa."}
                 </p>
 
-                <div className="flex flex-wrap gap-1.5 mb-3">
+                <div className="flex items-center gap-3">
                   {repo.language && (
-                    <span className="px-2 py-0.5 rounded-md bg-tropical-teal/12 text-tropical-teal text-xs font-mono font-semibold border border-tropical-teal/20">
+                    <span className="font-mono text-xs text-tropical-teal/80">
                       {repo.language}
                     </span>
                   )}
                   {repo.topics.map((topic) => (
                     <span
                       key={topic}
-                      className="px-2 py-0.5 rounded-md bg-sunset-orange/12 text-sunset-orange text-xs font-mono font-semibold border border-sunset-orange/20"
+                      className="font-mono text-xs text-muted-foreground/50"
                     >
                       {topic}
                     </span>
                   ))}
+                  {repo.stars > 0 && (
+                    <span className="flex items-center gap-1 font-mono text-xs text-muted-foreground/40 ml-auto">
+                      <Star className="w-3 h-3" />
+                      {repo.stars}
+                    </span>
+                  )}
                 </div>
-
-                {repo.stars > 0 && (
-                  <div className="flex items-center gap-1 text-xs text-muted-foreground/70 font-medium">
-                    <Star className="w-3 h-3" />
-                    {repo.stars}
-                  </div>
-                )}
               </div>
             ))}
           </div>
         ) : (
           <div className="fade-in-section text-center py-12">
-            <p className="text-muted-foreground">Projekti dolaze uskoro. Pratite nas na GitHubu!</p>
+            <p className="text-muted-foreground font-mono text-sm">
+              Projekti dolaze uskoro. Pratite nas na GitHubu.
+            </p>
           </div>
         )}
-
       </div>
     </section>
   );

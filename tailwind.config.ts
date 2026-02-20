@@ -72,6 +72,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
+        display: ["'Bricolage Grotesque'", "system-ui", "sans-serif"],
+        sans: ["'DM Sans'", "system-ui", "sans-serif"],
         mono: ["'JetBrains Mono'", "'Fira Code'", "monospace"],
       },
       keyframes: {
