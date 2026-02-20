@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "@/assets/vibecoders.png";
 
 const taglines = [
@@ -115,7 +115,7 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#ED1C40] text-white font-semibold text-base shadow-warm hover:bg-[#D1173A] transition-all hover:scale-105 active:scale-100"
             >
-              <img src="https://cdn.simpleicons.org/meetup/white" alt="" className="w-5 h-5" />
+              <img src="https://cdn.simpleicons.org/meetup/white" alt="" className="w-5 h-5" loading="lazy" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
               Meetup
             </a>
           </div>
@@ -166,6 +166,8 @@ export default function HeroSection() {
                 src={`https://cdn.simpleicons.org/${tech.slug}/white`}
                 alt={tech.name}
                 className="w-5 h-5 opacity-80"
+                loading="lazy"
+                onError={(e) => { e.currentTarget.style.display = 'none'; }}
               />
               <span>{tech.name}</span>
               <span className="ml-4 text-white/20">·</span>

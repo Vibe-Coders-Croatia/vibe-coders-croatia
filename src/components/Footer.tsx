@@ -44,7 +44,7 @@ export default function Footer() {
                   aria-label={s.label}
                   className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-sunset-orange/80 transition-colors"
                 >
-                  <img src={`https://cdn.simpleicons.org/${s.slug}/white`} alt={s.label} className="w-4 h-4" />
+                  <img src={`https://cdn.simpleicons.org/${s.slug}/white`} alt={s.label} className="w-4 h-4" loading="lazy" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 </a>
               ))}
             </div>
