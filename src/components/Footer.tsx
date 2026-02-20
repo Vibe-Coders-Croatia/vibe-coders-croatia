@@ -33,7 +33,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
-              Hrvatska otvorena zajednica buildera i kodera — gdje se kod, kultura, obala i suradnja spajaju.
+              Hrvatska otvorena zajednica buildera, designera i programera.
             </p>
             {/* Socials */}
             <div className="flex gap-3 mt-5">
@@ -67,23 +67,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact & GDPR */}
+          {/* GDPR */}
           <div>
-            <h4 className="font-semibold text-white text-sm mb-4 uppercase tracking-wide">Kontakt</h4>
-            <ul className="space-y-2.5 text-sm text-white/60">
-              <li>
-                <a href="mailto:hello@vibecoders.hr" className="hover:text-sunset-orange transition-colors">
-                  hello@vibecoders.hr
-                </a>
-              </li>
-              <li>
-                <a href="mailto:sponsors@vibecoders.hr" className="hover:text-sunset-orange transition-colors">
-                  sponsors@vibecoders.hr
-                </a>
-              </li>
-            </ul>
-
-            <div className="mt-6 p-4 rounded-xl bg-white/5 border border-white/10 text-xs text-white/40 leading-relaxed">
+            <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-xs text-white/40 leading-relaxed">
               <strong className="text-white/60">Privatnost / GDPR:</strong> Prikupljamo samo podatke koje dobrovoljno pružite. Nikada ne prodajemo vaše podatke. Svi podaci pohranjeni su na EU serverima u skladu s GDPR-om. Brisanje možete zatražiti u bilo kojem trenutku putem emaila.
             </div>
           </div>
