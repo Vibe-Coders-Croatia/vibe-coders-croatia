@@ -1,0 +1,43 @@
+{
+  "hero.tagline1": "Code, build, share.",
+  "hero.tagline2": "No gatekeeping, no limits.",
+  "hero.tagline3": "Open source, open people.",
+  "hero.tagline4": "Your next project starts here.",
+
+  "about.label": "// our story",
+  "about.heading": "A community for builders who <1>ship</1>",
+  "about.description": "Vibe Coders Croatia is a community for builders who ship. Whether you're working on your first side project or scaling your tenth product — you'll find people here who get it. No gatekeeping, no corporate stiffness — just makers who love turning ideas into software that works.",
+  "about.activitiesLabel": "// what we do",
+  "about.activities.meetups.title": "Meetups",
+  "about.activities.meetups.desc": "Regular gatherings where we share knowledge, experiences, and the latest trends",
+  "about.activities.workshops.title": "Workshops",
+  "about.activities.workshops.desc": "Hands-on sessions on tools and frameworks that help you build faster",
+  "about.activities.hackathons.title": "Hackathons",
+  "about.activities.hackathons.desc": "Intensive buildathons where ideas become functional products in record time",
+  "about.activities.hangouts.title": "Hangouts",
+  "about.activities.hangouts.desc": "Because the best product ideas are born over coffee (or beer)",
+  "about.whoLabel": "// who is this for",
+  "about.whoDescription": "Anyone who builds. Students, indie hackers, startup founders, senior engineers, CTOs — if you ship things and want to be surrounded by others who do the same, you're in the right place. The only prerequisite is curiosity.",
+
+  "projects.label": "// open source",
+  "projects.heading": "Community <1>projects</1>",
+  "projects.description": "Made by the community, for the community. Real code, real impact.",
+  "projects.noDescription": "No description.",
+  "projects.emptyState": "Projects coming soon. Follow us on GitHub.",
+
+  "sponsors.label": "// sponsors",
+  "sponsors.heading": "Those who <1>power</1> us",
+  "sponsors.description": "Our sponsors make free events, workshops, and community infrastructure possible.",
+
+  "footer.description": "Croatia's open community of builders, designers, and developers.",
+  "footer.navigation": "Navigation",
+  "footer.nav.about": "About",
+  "footer.nav.projects": "Projects",
+  "footer.nav.sponsors": "Sponsors",
+  "footer.privacy": "Privacy",
+  "footer.gdpr": "We only collect data you voluntarily provide. We never sell your data. All data is stored on EU servers in compliance with GDPR. You can request deletion at any time via email.",
+  "footer.madeIn": "// made in Zagreb",
+
+  "notfound.title": "Oops! Page not found",
+  "notfound.back": "Back to home"
+}
