@@ -1,11 +1,13 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import reactorLogo from "@/assets/reactor-logo.webp";
+import { useTranslation, Trans } from "react-i18next";
 
 const sponsors = [
   { name: "Reactor Studio", logo: reactorLogo, url: "https://www.reactor.studio/" },
 ];
 
 export default function SponsorsSection() {
+  const { t } = useTranslation();
   const ref = useScrollReveal();
 
   return (
@@ -13,15 +15,17 @@ export default function SponsorsSection() {
       <div className="container mx-auto px-6">
         <div className="fade-in-section">
           <p className="font-mono text-[11px] text-golden-sand tracking-[0.2em] uppercase mb-6">
-            // sponzori
+            {t("sponsors.label")}
           </p>
 
           <h2 className="font-display font-[800] text-3xl md:text-5xl lg:text-[3.5rem] text-foreground leading-[1.05] mb-5">
-            Oni koji nas <span className="text-sunset-orange">pokreću</span>
+            <Trans i18nKey="sponsors.heading">
+              Oni koji nas <span className="text-sunset-orange">pokreću</span>
+            </Trans>
           </h2>
 
           <p className="text-muted-foreground max-w-xl mb-12 leading-relaxed">
-            Naši sponzori omogućuju besplatne eventove, radionice i infrastrukturu zajednice.
+            {t("sponsors.description")}
           </p>
         </div>
 

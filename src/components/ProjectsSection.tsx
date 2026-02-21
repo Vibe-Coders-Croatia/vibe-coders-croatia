@@ -1,8 +1,10 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Github, ExternalLink, Star } from "lucide-react";
 import repos from "@/data/repos.json";
+import { useTranslation, Trans } from "react-i18next";
 
 export default function ProjectsSection() {
+  const { t } = useTranslation();
   const ref = useScrollReveal();
 
   return (
@@ -10,15 +12,17 @@ export default function ProjectsSection() {
       <div className="container mx-auto px-6">
         <div className="fade-in-section">
           <p className="font-mono text-[11px] text-tropical-teal tracking-[0.2em] uppercase mb-6">
-            // open source
+            {t("projects.label")}
           </p>
 
           <h2 className="font-display font-[800] text-3xl md:text-5xl lg:text-[3.5rem] text-foreground leading-[1.05] mb-5">
-            Projekti <span className="text-sunset-orange">zajednice</span>
+            <Trans i18nKey="projects.heading">
+              Projekti <span className="text-sunset-orange">zajednice</span>
+            </Trans>
           </h2>
 
           <p className="text-muted-foreground max-w-xl mb-12 leading-relaxed">
-            Napravljeno od zajednice, za zajednicu. Pravi kod, pravi utjecaj.
+            {t("projects.description")}
           </p>
         </div>
 
@@ -50,7 +54,7 @@ export default function ProjectsSection() {
                 </div>
 
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  {repo.description || "Nema opisa."}
+                  {repo.description || t("projects.noDescription")}
                 </p>
 
                 <div className="flex items-center gap-3">
@@ -80,7 +84,7 @@ export default function ProjectsSection() {
         ) : (
           <div className="fade-in-section text-center py-12">
             <p className="text-muted-foreground font-mono text-sm">
-              Projekti dolaze uskoro. Pratite nas na GitHubu.
+              {t("projects.emptyState")}
             </p>
           </div>
         )}
