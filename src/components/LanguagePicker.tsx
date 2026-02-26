@@ -14,7 +14,7 @@ export default function LanguagePicker() {
   };
 
   return (
-    <div className="absolute md:fixed top-4 right-4 md:top-6 md:right-6 z-50 font-mono text-[11px] tracking-[0.25em] uppercase flex items-center gap-1.5">
+    <div className="fixed top-4 right-4 md:top-6 md:right-6 z-50 font-mono text-[11px] tracking-[0.25em] uppercase flex items-center gap-1.5">
       <button
         onClick={() => switchTo("hr")}
         className={`transition-colors px-1 py-1 ${
@@ -23,6 +23,7 @@ export default function LanguagePicker() {
             : "text-muted-foreground/40 hover:text-sunset-orange"
         }`}
         aria-label="Hrvatski"
+        aria-current={!isEnglish ? "true" : undefined}
       >
         HR
       </button>
@@ -35,6 +36,7 @@ export default function LanguagePicker() {
             : "text-muted-foreground/40 hover:text-sunset-orange"
         }`}
         aria-label="English"
+        aria-current={isEnglish ? "true" : undefined}
       >
         EN
       </button>

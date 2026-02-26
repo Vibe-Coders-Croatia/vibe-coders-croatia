@@ -39,5 +39,8 @@
   "footer.madeIn": "// made in Zagreb",
 
   "notfound.title": "Oops! Page not found",
-  "notfound.back": "Back to home"
+  "notfound.back": "Back to home",
+
+  "seo.title": "Vibe Coders Croatia",
+  "seo.description": "Vibe Coders Croatia — a community of designers, developers, and product builders. Meetups, workshops, and networking."
 }

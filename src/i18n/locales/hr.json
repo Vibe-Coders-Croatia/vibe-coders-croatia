@@ -39,5 +39,8 @@
   "footer.madeIn": "// napravljeno u Zagrebu",
 
   "notfound.title": "Ups! Stranica nije pronađena",
-  "notfound.back": "Povratak na početnu"
+  "notfound.back": "Povratak na početnu",
+
+  "seo.title": "Vibe Coders Croatia",
+  "seo.description": "Vibe Coders Croatia — zajednica dizajnera, programera, product buildera. Meetupovi, radionice i networking."
 }
