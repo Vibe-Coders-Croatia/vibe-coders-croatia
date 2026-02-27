@@ -1,10 +1,7 @@
-const logo = "/vibecoders.webp";
+import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const navLinks = [
-  { label: "O nama", href: "#about" },
-  { label: "Projekti", href: "#projects" },
-  { label: "Sponzori", href: "#sponsors" },
-];
+const logo = "/vibecoders.webp";
 
 const socials = [
   { label: "Discord", href: "https://discord.gg/mTbs9mNv" },
@@ -13,6 +10,22 @@ const socials = [
 ];
 
 export default function Footer() {
+  const { t, i18n } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isEnglish = i18n.language === "en";
+
+  const switchLang = (lang: "hr" | "en") => {
+    const hash = location.hash;
+    navigate(lang === "en" ? `/en${hash}` : `/${hash}`);
+  };
+
+  const navLinks = [
+    { label: t("footer.nav.about"), href: "#about" },
+    { label: t("footer.nav.projects"), href: "#projects" },
+    { label: t("footer.nav.sponsors"), href: "#sponsors" },
+  ];
+
   const handleNav = (href: string) => {
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -31,7 +44,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs mb-6">
-              Hrvatska otvorena zajednica buildera, designera i programera.
+              {t("footer.description")}
             </p>
             <div className="flex gap-4">
               {socials.map((s) => (
@@ -51,7 +64,7 @@ export default function Footer() {
           {/* Nav */}
           <div>
             <p className="font-mono text-[10px] text-muted-foreground/30 tracking-[0.2em] uppercase mb-4">
-              Navigacija
+              {t("footer.navigation")}
             </p>
             <ul className="space-y-2">
               {navLinks.map((link) => (
@@ -70,17 +83,46 @@ export default function Footer() {
           {/* GDPR */}
           <div className="max-w-xs">
             <p className="font-mono text-[10px] text-muted-foreground/30 tracking-[0.2em] uppercase mb-4">
-              Privatnost
+              {t("footer.privacy")}
             </p>
             <p className="text-xs text-muted-foreground/40 leading-relaxed">
-              Prikupljamo samo podatke koje dobrovoljno pružite. Nikada ne prodajemo vaše podatke.
-              Svi podaci pohranjeni su na EU serverima u skladu s GDPR-om.
-              Brisanje možete zatražiti u bilo kojem trenutku putem emaila.
+              {t("footer.gdpr")}
             </p>
           </div>
         </div>
       </div>
 
+      {/* Mobile language picker */}
+      <div className="md:hidden">
+        <div className="container mx-auto px-6 py-3 flex items-center justify-center gap-1.5 font-mono text-[11px] tracking-[0.25em] uppercase">
+          <button
+            onClick={() => switchLang("hr")}
+            className={`transition-colors px-1 py-1 ${
+              !isEnglish
+                ? "text-foreground"
+                : "text-muted-foreground/40 hover:text-sunset-orange"
+            }`}
+            aria-label="Hrvatski"
+            aria-current={!isEnglish ? "true" : undefined}
+          >
+            HR
+          </button>
+          <span className="text-muted-foreground/20">&middot;</span>
+          <button
+            onClick={() => switchLang("en")}
+            className={`transition-colors px-1 py-1 ${
+              isEnglish
+                ? "text-foreground"
+                : "text-muted-foreground/40 hover:text-sunset-orange"
+            }`}
+            aria-label="English"
+            aria-current={isEnglish ? "true" : undefined}
+          >
+            EN
+          </button>
+        </div>
+      </div>
+      
       {/* Bottom bar */}
       <div className="border-t border-border">
         <div className="container mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
@@ -88,7 +130,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Vibe Coders Croatia
           </span>
           <span className="font-mono text-[11px] text-muted-foreground/20">
-            // napravljeno u Zagrebu
+            {t("footer.madeIn")}
           </span>
         </div>
       </div>

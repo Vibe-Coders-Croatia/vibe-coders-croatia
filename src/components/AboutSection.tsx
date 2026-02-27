@@ -1,28 +1,14 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-
-const activities = [
-  {
-    title: "Meetupovi",
-    description:
-      "Redovita okupljanja gdje dijelimo znanje, iskustva i najnovije trendove",
-  },
-  {
-    title: "Radionice",
-    description:
-      "Hands-on sesije o alatima i frameworcima koji pomažu da gradiš brže",
-  },
-  {
-    title: "Hackathoni",
-    description:
-      "Intenzivni buildathoni gdje ideje postaju funkcionalni proizvodi u rekordnom vremenu",
-  },
-  {
-    title: "Druženja",
-    description: "Jer najbolje ideje za produkte nastaju uz kavu (ili pivo)",
-  },
-];
+import { useTranslation, Trans } from "react-i18next";
 
 export default function AboutSection() {
+  const { t } = useTranslation();
+  const activities = [
+    { title: t("about.activities.meetups.title"), description: t("about.activities.meetups.desc") },
+    { title: t("about.activities.workshops.title"), description: t("about.activities.workshops.desc") },
+    { title: t("about.activities.hackathons.title"), description: t("about.activities.hackathons.desc") },
+    { title: t("about.activities.hangouts.title"), description: t("about.activities.hangouts.desc") },
+  ];
   const ref = useScrollReveal();
 
   return (
@@ -31,27 +17,24 @@ export default function AboutSection() {
         {/* Section label */}
         <div className="fade-in-section">
           <p className="font-mono text-[11px] text-sunset-orange tracking-[0.2em] uppercase mb-6">
-            // naša priča
+            {t("about.label")}
           </p>
 
           <h2 className="font-display font-[800] text-3xl md:text-5xl lg:text-[3.5rem] text-foreground leading-[1.05] mb-5 max-w-2xl">
-            Zajednica za buildere koji{" "}
-            <span className="text-sunset-orange">shipaju</span>
+            <Trans i18nKey="about.heading">
+              Zajednica za buildere koji <span className="text-sunset-orange">shipaju</span>
+            </Trans>
           </h2>
 
           <p className="text-muted-foreground max-w-xl mb-16 leading-relaxed">
-            Vibe Coders Croatia je zajednica za buildere koji shipaju. Bilo da
-            radite na prvom side projektu ili skalirate deseti produkt — ovdje
-            ćete naći ljude koji razumiju. Bez gatekeepinga, bez korporativne
-            ukočenosti — samo makeri koji vole pretvarati ideje u softver koji
-            radi.
+            {t("about.description")}
           </p>
         </div>
 
         {/* Activities — editorial numbered list */}
         <div className="fade-in-section">
           <p className="font-mono text-[11px] text-sunset-orange tracking-[0.2em] uppercase mb-6">
-            // što radimo
+            {t("about.activitiesLabel")}
           </p>
 
           <div className="border-t border-border">
@@ -77,13 +60,11 @@ export default function AboutSection() {
         {/* Who should join */}
         <div className="fade-in-section mt-16">
           <p className="font-mono text-[11px] text-sunset-orange tracking-[0.2em] uppercase mb-6">
-            // za koga je ovo
+            {t("about.whoLabel")}
           </p>
 
           <p className="text-muted-foreground max-w-xl leading-relaxed">
-            Svatko tko gradi. Studenti, indie hackeri, startup founderi, senior
-            inženjeri, CTO-ovi — ako shipaš stvari i želiš biti okružen drugima
-            koji rade isto, na pravom si mjestu. Jedini preduvjet je znatiželja.
+            {t("about.whoDescription")}
           </p>
         </div>
 

@@ -1,0 +1,46 @@
+{
+  "hero.tagline1": "Kodiraj, gradi, dijeli.",
+  "hero.tagline2": "Bez gatekeepinga, bez granica.",
+  "hero.tagline3": "Otvoreni kod, otvoreni ljudi.",
+  "hero.tagline4": "Tvoj sljedeći projekt počinje ovdje.",
+
+  "about.label": "// naša priča",
+  "about.heading": "Zajednica za buildere koji <1>shipaju</1>",
+  "about.description": "Vibe Coders Croatia je zajednica za buildere koji shipaju. Bilo da radite na prvom side projektu ili skalirate deseti produkt — ovdje ćete naći ljude koji razumiju. Bez gatekeepinga, bez korporativne ukočenosti — samo makeri koji vole pretvarati ideje u softver koji radi.",
+  "about.activitiesLabel": "// što radimo",
+  "about.activities.meetups.title": "Meetupovi",
+  "about.activities.meetups.desc": "Redovita okupljanja gdje dijelimo znanje, iskustva i najnovije trendove",
+  "about.activities.workshops.title": "Radionice",
+  "about.activities.workshops.desc": "Hands-on sesije o alatima i frameworcima koji pomažu da gradiš brže",
+  "about.activities.hackathons.title": "Hackathoni",
+  "about.activities.hackathons.desc": "Intenzivni buildathoni gdje ideje postaju funkcionalni proizvodi u rekordnom vremenu",
+  "about.activities.hangouts.title": "Druženja",
+  "about.activities.hangouts.desc": "Jer najbolje ideje za produkte nastaju uz kavu (ili pivo)",
+  "about.whoLabel": "// za koga je ovo",
+  "about.whoDescription": "Svatko tko gradi. Studenti, indie hackeri, startup founderi, senior inženjeri, CTO-ovi — ako shipaš stvari i želiš biti okružen drugima koji rade isto, na pravom si mjestu. Jedini preduvjet je znatiželja.",
+
+  "projects.label": "// open source",
+  "projects.heading": "Projekti <1>zajednice</1>",
+  "projects.description": "Napravljeno od zajednice, za zajednicu. Pravi kod, pravi utjecaj.",
+  "projects.noDescription": "Nema opisa.",
+  "projects.emptyState": "Projekti dolaze uskoro. Pratite nas na GitHubu.",
+
+  "sponsors.label": "// sponzori",
+  "sponsors.heading": "Oni koji nas <1>pokreću</1>",
+  "sponsors.description": "Naši sponzori omogućuju besplatne eventove, radionice i infrastrukturu zajednice.",
+
+  "footer.description": "Hrvatska otvorena zajednica buildera, designera i programera.",
+  "footer.navigation": "Navigacija",
+  "footer.nav.about": "O nama",
+  "footer.nav.projects": "Projekti",
+  "footer.nav.sponsors": "Sponzori",
+  "footer.privacy": "Privatnost",
+  "footer.gdpr": "Prikupljamo samo podatke koje dobrovoljno pružite. Nikada ne prodajemo vaše podatke. Svi podaci pohranjeni su na EU serverima u skladu s GDPR-om. Brisanje možete zatražiti u bilo kojem trenutku putem emaila.",
+  "footer.madeIn": "// napravljeno u Zagrebu",
+
+  "notfound.title": "Ups! Stranica nije pronađena",
+  "notfound.back": "Povratak na početnu",
+
+  "seo.title": "Vibe Coders Croatia",
+  "seo.description": "Vibe Coders Croatia — zajednica dizajnera, programera, product buildera. Meetupovi, radionice i networking."
+}
