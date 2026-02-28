@@ -132,10 +132,16 @@
 
 /* ─── Ticker scroll ─── */
 @keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
 }
 .animate-ticker {
+  display: flex;
+  overflow: hidden;
+}
+.ticker-track {
+  flex-shrink: 0;
+  display: flex;
   animation: ticker 40s linear infinite;
 }
 
@@ -162,7 +168,7 @@
   .cursor-blink {
     animation: none;
   }
-  .animate-ticker {
+  .ticker-track {
     animation: none;
   }
   .fade-in-section {
