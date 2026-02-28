@@ -16,7 +16,7 @@ export default function AboutSection() {
       <div className="container mx-auto px-6">
         {/* Section label */}
         <div className="fade-in-section">
-          <p className="font-mono text-[11px] text-sunset-orange tracking-[0.2em] uppercase mb-6">
+          <p className="font-mono text-xs text-sunset-orange tracking-[0.2em] uppercase mb-6">
             {t("about.label")}
           </p>
 
@@ -33,7 +33,7 @@ export default function AboutSection() {
 
         {/* Activities — editorial numbered list */}
         <div className="fade-in-section">
-          <p className="font-mono text-[11px] text-sunset-orange tracking-[0.2em] uppercase mb-6">
+          <p className="font-mono text-xs text-sunset-orange tracking-[0.2em] uppercase mb-6">
             {t("about.activitiesLabel")}
           </p>
 
@@ -59,7 +59,7 @@ export default function AboutSection() {
 
         {/* Who should join */}
         <div className="fade-in-section mt-16">
-          <p className="font-mono text-[11px] text-sunset-orange tracking-[0.2em] uppercase mb-6">
+          <p className="font-mono text-xs text-sunset-orange tracking-[0.2em] uppercase mb-6">
             {t("about.whoLabel")}
           </p>
 

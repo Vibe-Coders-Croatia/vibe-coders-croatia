@@ -117,7 +117,7 @@ export default function HeroSection() {
 
         {/* Provenance */}
         <p
-          className="font-mono text-[11px] text-muted-foreground/70 tracking-[0.25em] uppercase mb-8 reveal-up"
+          className="font-mono text-xs text-muted-foreground/70 tracking-[0.25em] uppercase mb-8 reveal-up"
           style={{ animationDelay: "150ms" }}
         >
           est. 2026 · Zagreb, HR
@@ -205,9 +205,9 @@ export default function HeroSection() {
           {[...techs, ...techs].map((tech, i) => (
             <span
               key={i}
-              className="inline-flex items-center gap-1.5 font-mono text-[11px] text-muted-foreground/35 px-4 whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 font-mono text-xs text-muted-foreground/55 px-4 whitespace-nowrap"
             >
-              <svg className="w-3.5 h-3.5 opacity-50" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-3.5 h-3.5 opacity-65" viewBox="0 0 24 24" fill="currentColor">
                 <path d={techIcons[tech.icon]} />
               </svg>
               {tech.name}

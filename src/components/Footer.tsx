@@ -53,7 +53,7 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-xs text-muted-foreground/50 hover:text-sunset-orange transition-colors"
+                  className="font-mono text-xs text-muted-foreground/70 hover:text-sunset-orange transition-colors"
                 >
                   {s.label}
                 </a>
@@ -63,7 +63,7 @@ export default function Footer() {
 
           {/* Nav */}
           <div>
-            <p className="font-mono text-[10px] text-muted-foreground/30 tracking-[0.2em] uppercase mb-4">
+            <p className="font-mono text-xs text-muted-foreground/70 tracking-[0.2em] uppercase mb-4">
               {t("footer.navigation")}
             </p>
             <ul className="space-y-2">
@@ -82,10 +82,10 @@ export default function Footer() {
 
           {/* GDPR */}
           <div className="max-w-xs">
-            <p className="font-mono text-[10px] text-muted-foreground/30 tracking-[0.2em] uppercase mb-4">
+            <p className="font-mono text-xs text-muted-foreground/60 tracking-[0.2em] uppercase mb-4">
               {t("footer.privacy")}
             </p>
-            <p className="text-xs text-muted-foreground/40 leading-relaxed">
+            <p className="text-xs text-muted-foreground/70 leading-relaxed">
               {t("footer.gdpr")}
             </p>
           </div>
@@ -94,26 +94,26 @@ export default function Footer() {
 
       {/* Mobile language picker */}
       <div className="md:hidden">
-        <div className="container mx-auto px-6 py-3 flex items-center justify-center gap-1.5 font-mono text-[11px] tracking-[0.25em] uppercase">
+        <div className="container mx-auto px-6 py-3 flex items-center justify-center gap-1.5 font-mono text-xs tracking-[0.25em] uppercase">
           <button
             onClick={() => switchLang("hr")}
             className={`transition-colors px-1 py-1 ${
               !isEnglish
                 ? "text-foreground"
-                : "text-muted-foreground/40 hover:text-sunset-orange"
+                : "text-muted-foreground/60 hover:text-sunset-orange"
             }`}
             aria-label="Hrvatski"
             aria-current={!isEnglish ? "true" : undefined}
           >
             HR
           </button>
-          <span className="text-muted-foreground/20">&middot;</span>
+          <span className="text-muted-foreground/60">&middot;</span>
           <button
             onClick={() => switchLang("en")}
             className={`transition-colors px-1 py-1 ${
               isEnglish
                 ? "text-foreground"
-                : "text-muted-foreground/40 hover:text-sunset-orange"
+                : "text-muted-foreground/60 hover:text-sunset-orange"
             }`}
             aria-label="English"
             aria-current={isEnglish ? "true" : undefined}
@@ -122,14 +122,14 @@ export default function Footer() {
           </button>
         </div>
       </div>
-      
+
       {/* Bottom bar */}
       <div className="border-t border-border">
         <div className="container mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span className="font-mono text-[11px] text-muted-foreground/30">
+          <span className="font-mono text-xs text-muted-foreground/60">
             &copy; {new Date().getFullYear()} Vibe Coders Croatia
           </span>
-          <span className="font-mono text-[11px] text-muted-foreground/20">
+          <span className="font-mono text-[12px] text-muted-foreground/60">
             {t("footer.madeIn")}
           </span>
         </div>

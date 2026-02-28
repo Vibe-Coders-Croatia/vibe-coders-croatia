@@ -11,7 +11,7 @@ export default function ProjectsSection() {
     <section id="projects" className="py-20 md:py-28 bg-card relative" ref={ref}>
       <div className="container mx-auto px-6">
         <div className="fade-in-section">
-          <p className="font-mono text-[11px] text-tropical-teal tracking-[0.2em] uppercase mb-6">
+          <p className="font-mono text-xs text-tropical-teal tracking-[0.2em] uppercase mb-6">
             {t("projects.label")}
           </p>
 

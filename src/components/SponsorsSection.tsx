@@ -14,7 +14,7 @@ export default function SponsorsSection() {
     <section id="sponsors" className="py-20 md:py-28 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <div className="fade-in-section">
-          <p className="font-mono text-[11px] text-golden-sand tracking-[0.2em] uppercase mb-6">
+          <p className="font-mono text-xs text-golden-sand tracking-[0.2em] uppercase mb-6">
             {t("sponsors.label")}
           </p>
 
